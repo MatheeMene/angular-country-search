@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            
             "outputPath": "dist/information-country",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -28,9 +29,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/materialize-css/dist/css/materialize.min.css",
+              "node_modules/@mdi/font/css/materialdesignicons.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/materialize-css/dist/js/materialize.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,9 +99,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/materialize-css/dist/css/materialize.min.css",
+              "node_modules/@mdi/font/css/materialdesignicons.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/materialize-css/dist/js/materialize.min.js"
+            ]
           }
         },
         "lint": {
@@ -124,6 +135,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "information-country"
 }

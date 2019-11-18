@@ -1,0 +1,19 @@
+h1 {
+  text-align: center;
+  font-size: 2em;
+  background-image: url('../../assets/images/map_specific.jpg');
+  background-position-x: 42%;
+  background-position-y: 57%;
+  padding: 2em;
+  color: whitesmoke;
+  text-shadow: 5px 5px 5px #000;
+  margin-top: 0;
+  font-family: 'Alatsi', sans-serif;
+}
+input {
+  width: 70% !important;
+}
+.container {
+  display: flex;
+  align-items: center;
+}

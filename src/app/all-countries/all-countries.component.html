@@ -1,0 +1,19 @@
+<mz-card
+  *ngFor="let country of countries"
+  class="grey darken-1 white-text">
+  <mz-card-image>
+    <img src="{{ country.flag }}" />
+  </mz-card-image>
+  <mz-card-image-title>
+    {{ country.name }}
+  </mz-card-image-title>
+  <mz-card-title>
+    Basic Informations
+  </mz-card-title>
+  <mz-card-content>
+    <p> Initials-> {{ country.alpha2Code }}</p>
+    <p> Region-> {{ country.region }}</p>
+    <p> Currency-> {{ country.currencies[0].name }}</p>
+  </mz-card-content>
+</mz-card>
+
