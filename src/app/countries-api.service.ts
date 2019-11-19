@@ -14,4 +14,9 @@ export class CountriesApiService {
     return this.httpClient
       .get(`https://restcountries.eu/rest/v2/all`);
   }
+
+  public getSpecificCountry(value: any) {
+    return this.httpClient
+      .get(`https://restcountries.eu/rest/v2/name/${value}`);
+  }
 }

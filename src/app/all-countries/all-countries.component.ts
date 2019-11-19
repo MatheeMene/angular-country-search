@@ -8,10 +8,13 @@ import { CountriesApiService } from '../countries-api.service';
 })
 export class AllCountriesComponent implements OnInit {
 
-  countries;
+  private countries: any;
 
-  constructor(private countriesApi: CountriesApiService) { }
-
+  constructor(private countriesApi: CountriesApiService) {
+    
+  }
+  
+  
   ngOnInit() {
     this.countriesApi.getCountries().subscribe( data => {
       this.countries = data;

@@ -17,3 +17,16 @@ input {
   display: flex;
   align-items: center;
 }
+hr {
+  border: 0;
+  height: .15%;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(169, 169, 169, 0), rgba(169, 169, 169, .75), rgba(169, 169, 169, 0));
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.country-not-exists {
+  color: firebrick;
+  line-height: .5em;
+
+}

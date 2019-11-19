@@ -3,16 +3,45 @@
 
   <mz-input-container>
     <i mz-icon mz-input-prefix
-      [icon]="'flight_takeoff'">
+      [icon]="'search'">
     </i>
-    <input mz-input
+    <input
+      (keyup)="inputValue($event)"
+      #input  
+      mz-input
       [label]="'Name of country'"
       id="text-input"
       type="text">
   </mz-input-container>
   <button 
+    (click)="searchButton()"
     mz-button
     class="red lighten-1 search-button">
     Search
   </button>
 </div>
+
+<span class="container country-not-exists" [innerHTML]="errorString"></span>
+
+<hr>
+
+<mz-card
+  *ngFor="let specificCountry of specificCountries"
+  class="grey darken-1 white-text">
+  <mz-card-image>
+    <img src="{{ specificCountry.flag }}" />
+  </mz-card-image>
+  <mz-card-image-title>
+    {{ specificCountry.name }}
+  </mz-card-image-title>
+  <mz-card-title>
+    Country Informations
+  </mz-card-title>
+  <mz-card-content>
+    <p> Initials-> {{ specificCountry.alpha2Code }}</p>
+    <p> Capital-> {{ specificCountry.capital }}</p>
+    <p> Region-> {{ specificCountry.region }}</p>
+    <p> Population-> {{ specificCountry.population }}</p>
+    <p> Currency-> {{ specificCountry.currencies[0].name }}</p>
+  </mz-card-content>
+</mz-card>
